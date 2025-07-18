@@ -35,7 +35,7 @@ app.delete("/api/products/:id", async (req, res) => {
     await Product.findByIdAndDelete(id);
     res.status(200).json({ success: true, message: "Product Deleted" });
   } catch (error) {
-    console.errror("Error in Deleting product:", error.message);
+    console.error("Error in Deleting product:", error.message);
     res.status(500).json({ success: false, message: "Server Error" });
   }
 });
